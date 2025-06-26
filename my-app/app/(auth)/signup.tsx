@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import React, { useState } from "react";
 import {
   View,
@@ -23,14 +24,11 @@ const Signup = () => {
 
       {/* Form */}
       <View>
-        {/* Email Input */}
         <View style={styles.inputWrapper}>
           <TextInput
             placeholder="Name"
             placeholderTextColor="#aaa"
-            keyboardType="email-address"
             style={styles.input}
-            defaultValue="hungnk1996@gmail.com"
           />
         </View>
         <View style={styles.inputWrapper}>
@@ -39,7 +37,6 @@ const Signup = () => {
             placeholderTextColor="#aaa"
             keyboardType="email-address"
             style={styles.input}
-            defaultValue="hungnk1996@gmail.com"
           />
           <Text style={styles.icon}>✓</Text>
         </View>
@@ -51,7 +48,6 @@ const Signup = () => {
             placeholderTextColor="#aaa"
             secureTextEntry={!showPassword}
             style={styles.input}
-            defaultValue="12345678"
           />
           <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
             <Text style={styles.icon}>{showPassword ? "🙈" : "👁️"}</Text>
@@ -81,6 +77,7 @@ const Signup = () => {
             }}
             style={styles.platformIcon}
           />
+          <Link href={"/login"}> Already have an acccount </Link>
         </View>
       </View>
     </View>

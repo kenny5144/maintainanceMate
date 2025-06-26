@@ -7,12 +7,13 @@ const Onboarding = () => {
   //   }
   return (
     <View>
+      <TextInput placeholder="e.g first home ,main house " />
       <Text> what is Your address </Text>
       <TextInput
         placeholderTextColor="#aaa"
         keyboardType="default"
         // style={styles.input}
-        defaultValue="hungnk1996@gmail.com"
+        defaultValue="123, gdd ave"
       />
     </View>
   );

@@ -1,6 +1,7 @@
 import { Text, View } from "react-native";
 import "@/global.css";
 import { Button } from "@react-navigation/elements";
+import { Link } from "expo-router";
 
 export default function Index() {
   return (
@@ -15,6 +16,7 @@ export default function Index() {
       </View>
       <View>
         <Text> Daily tasks</Text>
+        <Link href={"/login"}>to login</Link>
       </View>
     </View>
   );

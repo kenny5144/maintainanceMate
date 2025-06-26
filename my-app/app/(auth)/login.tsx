@@ -1,3 +1,4 @@
+import { Link } from "expo-router";
 import React, { useState } from "react";
 import {
   View,
@@ -32,7 +33,6 @@ const Login = () => {
             placeholderTextColor="#aaa"
             keyboardType="email-address"
             style={styles.input}
-            defaultValue="hungnk1996@gmail.com"
           />
           <Text style={styles.icon}>✓</Text>
         </View>
@@ -44,7 +44,6 @@ const Login = () => {
             placeholderTextColor="#aaa"
             secureTextEntry={!showPassword}
             style={styles.input}
-            defaultValue="12345678"
           />
           <TouchableOpacity onPress={() => setShowPassword(!showPassword)}>
             <Text style={styles.icon}>{showPassword ? "🙈" : "👁️"}</Text>
@@ -75,6 +74,8 @@ const Login = () => {
             style={styles.platformIcon}
           />
         </View>
+        <Link href={"/signup"}>Dont have an account?</Link>
+        <Link href={"/profile"}>profile</Link>
       </View>
     </View>
   );
@@ -83,7 +84,7 @@ const Login = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#ffffff", // warm soft background
+    backgroundColor: "#ffffff",
     justifyContent: "flex-start",
     padding: 20,
   },
